@@ -14,7 +14,7 @@ import org.junit.Test;
  * Student Name: Wong Qian Yi
  * Student ID: 21027604
  * Class: C208-2S4S-W64L
- * Date/Time created: Tuesday 31-05-2022 12:25
+ * Date/Time created: Tuesday 31-05-2022 16:46
  */
 
 /**
@@ -23,183 +23,37 @@ import org.junit.Test;
  */
 public class CalculatorTest {
 
+	/**
+	 * @throws java.lang.Exception
+	 */
+	@BeforeClass
+	public static void setUpBeforeClass() throws Exception {
+	}
+
+	/**
+	 * @throws java.lang.Exception
+	 */
+	@AfterClass
+	public static void tearDownAfterClass() throws Exception {
+	}
+
+	/**
+	 * @throws java.lang.Exception
+	 */
+	@Before
+	public void setUp() throws Exception {
+	}
+
+	/**
+	 * @throws java.lang.Exception
+	 */
+	@After
+	public void tearDown() throws Exception {
+	}
+
 	@Test
-	public void testAdd() {
-		//fail("Not yet implemented");
-		int a = 20;
-		int b = 10;
-		
-		Calculator cal = new Calculator();
-		int actual = cal.add(a, b);
-		
-		int expected = 30;
-		assertEquals (expected,actual);
+	public void test() {
+		fail("Not yet implemented");
 	}
-	@Test
-	public void testAddBoundaryMin() {
-		int a = 0;
-		int b = 0;
-		
-		Calculator cal = new Calculator();
-		int actual = cal.add(a, b);
-		
-		int expected = 0;
-		assertEquals(expected,actual);
-	}
-	@Test
-	public void testAddBoundaryMax() {
-		int a = 0;
-		int b = 9999;
-		
-		Calculator cal = new Calculator();
-		int actual = cal.add(a, b);
-		
-		int expected = 9999;
-		assertEquals(expected,actual);
-	}
-	@Test
-	public void addError() {
-		int a = 0;
-		int b = 9999;
-		
-		Calculator cal = new Calculator();
-		int actual = cal.add(a, b);
-		
-		String expected = "Error!";
-		assertNotEquals(expected, actual);
-		
-		boolean actualBound = cal.boundary(a, b);
-		boolean expectedBoundary = false;
-		assertEquals (expectedBoundary, actualBound);
-	}
-	@Test
-	public void testSubtract() {
-		int a = 20;
-		int b = 10;
-		
-		Calculator cal = new Calculator();
-		int actual = cal.subtract(a, b);
-		
-		int expected = 10;
-		assertEquals (expected,actual);
-	}
-	@Test
-	public void testSubtractBoundaryMin() {
-		int a = 0;
-		int b = 0;
-		
-		Calculator cal = new Calculator();
-		int actual = cal.subtract(a, b);
-		
-		int expected = 0;
-		assertEquals (expected,actual);
-	}
-	@Test
-	public void testSubtractBoundaryMax() {
-		int a = 0;
-		int b = 9999;
-		
-		Calculator cal = new Calculator();
-		int actual = cal.subtract(a, b);
-		
-		int expected = 9999;
-		assertEquals (expected,actual);
-	}
-	@Test
-	public void subtractError() {
-		int a = 0;
-		int b = 9999;
-		
-		Calculator cal = new Calculator();
-		int actual = cal.subtract(a, b);
-		
-		String expected = "Error!";
-		assertNotEquals (expected,actual);
-		
-		boolean actualBound = cal.boundary(a, b);
-		boolean expectedBoundary = false;
-		assertEquals (expectedBoundary, actualBound);
-	}
-	@Test
-	public void testMultiply() {
-		int a = 20;
-		int b = 10;
-		
-		Calculator cal = new Calculator();
-		int actual = cal.multiply(a, b);
-		
-		int expected = 200;
-		assertEquals (expected,actual);
-	}
-	@Test
-	public void testMultipleBoundary() {
-		int a = 0;
-		int b = 9999;
-		
-		Calculator cal = new Calculator();
-		int actual = cal.multiply(a, b);
-		
-		int expected = 0;
-		assertEquals (expected,actual);
-		
-		boolean actualBound = cal.boundary(a, b);
-		boolean expectedBoundary = false;
-		assertEquals (expectedBoundary, actualBound);
-	}
-	@Test
-	public void testMultiplyError() {
-		int a = 9999;
-		int b = 0;
-		
-		Calculator cal = new Calculator();
-		int actual = cal.multiply(a, b);
-		
-		String expected = "Error!";
-		assertNotEquals (expected,actual);
-		
-		boolean actualBound = cal.boundary(a, b);
-		boolean expectedBoundary = false;
-		assertEquals (expectedBoundary, actualBound);
-	}
-	@Test
-	public void testDivide() {
-		int a = 20;
-		int b = 10;
-		
-		Calculator cal = new Calculator();
-		int actual = cal.divide(a, b);
-		
-		int expected = 2;
-		assertEquals (expected,actual);
-	}
-	@Test 
-	public void testDivideBoundary() {
-		int a = 0;
-		int b = 9999;
-		
-		Calculator cal = new Calculator();
-		int actual = cal.divide(a, b);
-		
-		int expected = 0;
-		assertEquals (expected,actual);
-		
-		boolean actualBound = cal.boundary(a, b);
-		boolean expectedBoundary = false;
-		assertEquals (expectedBoundary, actualBound);
-	}
-	@Test
-	public void testDivideError() {
-		int a = 9999;
-		int b = -1;
-		
-		Calculator cal = new Calculator();
-		int actual = cal.divide(a, b);
-		
-		String expected = "Error!";
-		assertNotEquals (expected,actual);
-		
-		boolean actualBound = cal.boundary(a, b);
-		boolean expectedBoundary = false;
-		assertEquals (expectedBoundary, actualBound);
-	}
+
 }
